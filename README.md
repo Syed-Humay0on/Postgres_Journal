@@ -4,11 +4,12 @@ Tracking my daily PostgreSQL learning with Docker + pgcli + Ecto.
 
 ## Progress
 - ✅ Day 1: Docker Setup (postgres + pgadmin)
-- 🔄 Day 2: Tables & Data Types (in progress...)
+- ✅ Day 2: Production-Ready Blog Schema (10,104 rows)
+- 🚀 Day 3: CRUD Operations (next...)
 
 ## Daily Logs
 - `day01-setup.sql` - Initial database creation
-- `day02-tables.sql` - Tables and data types practice
+- `day02-tables.sql` - Complete blog schema with GIN indexes + 10K test rows
 
 ## Usage
 ```bash
