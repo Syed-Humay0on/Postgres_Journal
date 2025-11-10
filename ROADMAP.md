@@ -1,7 +1,7 @@
 # PostgreSQL 30-Day Mastery Roadmap
 
 ## Week 1: DDL & DML
-- **Day 1**: Databases & Schemas (`\l`, `\c`, `\dn`, `CREATE SCHEMA`)
+- **Day 1**: Databases & Schemas (`\l`, `\c`, `\dn`, `CREATE SCHEMA`)✅
 - **Day 2**: Tables, Data Types & Indexing (GIN, B-tree, CHECK constraints) ✅
 - **Day 3**: CRUD Mastery (`INSERT RETURNING`, `UPDATE ... FROM`, `DELETE CASCADE`)
 - **Day 4**: Advanced Constraints (`ALTER TABLE`, regex validation, `ADD CONSTRAINT`)
