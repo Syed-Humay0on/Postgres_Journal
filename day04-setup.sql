@@ -37,8 +37,8 @@ update blogs.posts set metadata = metadata || '{"views" : -150}'::JSONB where us
 -- new row for relation "posts" violates check constraint "check_value_positive"
 -- DETAIL:  Failing row contains (10510, 19, Transactional Post, null, t, null, {transaction,published}, {"views": -150}, 2025-11-11 22:08:15.916363+05, 2025-11-11 22:08>
 
-  🔍 Query 1: View All CHECK Constraints in the blogs Schema
-  admin@localhost:mydatabase> select conname as contraint_name, conrelid::REGCLASS as table_name, pg_get_constraintdef(oid) as definition from pg_constraint where connamespace = 'blogs'::regnamespace and contype = 'c' order by conrelid, conname;
+  -- 🔍 Query 1: View All CHECK Constraints in the blogs Schema
+select conname as contraint_name, conrelid::REGCLASS as table_name, pg_get_constraintdef(oid) as definition from pg_constraint where connamespace = 'blogs'::regnamespace and contype = 'c' order by conrelid, conname;
 -- +-----------------------+----------------+----------------------------------------------------------------------------+
 -- | contraint_name        | table_name     | definition                                                                 |
 -- |-----------------------+----------------+----------------------------------------------------------------------------|
@@ -52,14 +52,14 @@ update blogs.posts set metadata = metadata || '{"views" : -150}'::JSONB where us
 -- +-----------------------+----------------+----------------------------------------------------------------------------+
 
 create unique index user_email_unique_lower on blogs.users (LOWER(email));
-CREATE INDEX
-Time: 0.008s
+-- CREATE INDEX
+-- Time: 0.008s
 
 insert into blogs.users (username, email, password_hash) values ('BOB', 'BOB@EXAMPLE.COM', 'hasheh_bob');
 -- duplicate key value violates unique constraint "user_email_unique_lower"
 -- DETAIL:  Key (lower(email::text))=(bob@example.com) already exists.
 
-admin@localhost:mydatabase> insert into blogs.users (username, email, password_hash) values ('charlie', 'CHARlie@test.ORG', 'hasheh_bob');
+insert into blogs.users (username, email, password_hash) values ('charlie', 'CHARlie@test.ORG', 'hasheh_bob');
 -- duplicate key value violates unique constraint "users_username_key"
 -- DETAIL:  Key (username)=(charlie) already exists.
 
