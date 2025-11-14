@@ -7,6 +7,7 @@ Tracking my daily PostgreSQL learning with Docker + pgcli + Ecto.
 - ✅ Day 2: Production-Ready Blog Schema (10,104 rows)
 - ✅ Day 3: Complete CRUD Mastery (200+ lines, all patterns)
 - ✅ Day 4: Advanced Constraints (CHECK, UNIQUE, Partial Indexes, FOREIGN KEY Cascades, EXCLUSION)
+- 🚀 Day 5: CSV Import/Export
 
 ## Daily Logs
 - `day01-setup.sql` - Initial database creation
