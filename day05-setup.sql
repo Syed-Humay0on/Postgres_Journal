@@ -71,4 +71,6 @@ select u.id, u.username, COUNT(p.id) as post_count from blogs.users u left join 
 -- +----------------------+------------+
 
 \copy blogs.users(username, email, password_hash, age) to '/home/proto/Documents/Database/Postgres_Journal/user_bulk.csv' delimiter ',' csv header;
+ \copy (select id, username, email, age from blogs.users where age > 25) to '/home/proto/Documents/Database/Postgres_Journal/user_bulk.csv'
+ delimiter ',' csv header;
 
