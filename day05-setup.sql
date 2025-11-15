@@ -55,3 +55,20 @@ select u.id, u.username, COUNT(p.id) as post_count from blogs.users u left join 
 -- | 50 | david    | 0          |
 -- +----+----------+------------+
 
+-- +----------------------+------------+
+-- | tablename            | tableowner |
+-- |----------------------+------------|
+-- | api_keys             | admin      |
+-- | comments             | admin      |
+-- | deleted_posts_backup | admin      |
+-- | meeting_rooms        | admin      |
+-- | nested_comments      | admin      |
+-- | posts                | admin      |
+-- | posts_restrict       | admin      |
+-- | products             | admin      |
+-- | room_bookings        | admin      |
+-- | users                | admin      |
+-- +----------------------+------------+
+
+\copy blogs.users(username, email, password_hash, age) to '/home/proto/Documents/Database/Postgres_Journal/user_bulk.csv' delimiter ',' csv header;
+
