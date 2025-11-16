@@ -69,8 +69,30 @@ select u.id, u.username, COUNT(p.id) as post_count from blogs.users u left join 
 -- | room_bookings        | admin      |
 -- | users                | admin      |
 -- +----------------------+------------+
-
 \copy blogs.users(username, email, password_hash, age) to '/home/proto/Documents/Database/Postgres_Journal/user_bulk.csv' delimiter ',' csv header;
- \copy (select id, username, email, age from blogs.users where age > 25) to '/home/proto/Documents/Database/Postgres_Journal/user_bulk.csv'
- delimiter ',' csv header;
+ \copy (select id, username, email, age from blogs.users where age > 25) to '/home/proto/Documents/Database/Postgres_Journal/user_bulk.csv' delimiter ',' csv header;
 
+-- 🎯 Section 5.1 Summary: What You Just Did
+-- ✅ Created a CSV file on your host machine
+-- ✅ Used \COPY to bulk import 5 users in one command
+-- ✅ Verified CHECK constraints caught invalid data during import
+-- ✅ Verified UNIQUE indexes prevented duplicates during import
+-- ✅ Audited your schema to see what's real vs test data
+-- ✅ Exported data back to CSV for backups or sharing
+
+-- 📌 SECTION 5.2: COPY vs \COPY (Server vs Client)
+-- 🎯 The Core Difference
+--
+-- | Command     | Runs On               | Permissions        | File Location               | When to Use                                  |
+-- | ----------- | --------------------- | ------------------ | --------------------------- | -------------------------------------------- |
+-- | **`\COPY`** | **pgcli client**      | Your user account  | Your laptop/host            | **Most common** - safer, no superuser needed |
+-- | **`COPY`**  | **PostgreSQL server** | Postgres superuser | **Inside Docker container** | Server has direct file access                |
+--
+ 
+-- 🎯 Section 5.4: Real-World Dataset (10,000 Rows)
+-- Let's import a real public dataset to see performance.
+-- Step 1: Download Sample Data
+ 
+-- Duplicate rows to make ~100 rows for testing:
+-- # Quick bash trick (on host)
+-- for i in {1..5}; do cat products_catalog.csv >> products_big.csv; done
