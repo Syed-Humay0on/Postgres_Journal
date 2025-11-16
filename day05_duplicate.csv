@@ -1,0 +1,2 @@
+id,username,email,password_hash,age
+201,test_user_100,duplicate@example.com,hash,30

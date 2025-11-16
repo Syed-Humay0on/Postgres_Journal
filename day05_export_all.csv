@@ -1,0 +1,17 @@
+id,username,email,password_hash,is_verified,created_at,age
+2,bob,bob@example.com,$2b$12$KIXpS8zKzJxTpjWQFl7y1uI0pJHqDvpN6oNxJNp9QHMG5DGnH2kla,f,2025-11-10 20:04:14.296178+05,
+3,charlie,charlie@test.org,$2b$12$QMz8sXzLQ3pLr8xVnHzJLu5j7v9w0Rq9pTlM8nYyX5vKLpq8kM0d,f,2025-11-10 20:04:14.296178+05,
+5,valid3,test_123@test-domain.org,hash,f,2025-11-10 21:39:00.844275+05,
+100,test_user_100,test100@example.com,hash_100,f,2025-11-16 22:16:20.69033+05,30
+101,test_user_101,test101@example.com,hash_101,f,2025-11-16 22:16:20.69033+05,25
+102,test_user_102,test102@example.com,hash_102,f,2025-11-16 22:16:20.69033+05,40
+18,frank,frank@batch.com,hash1,f,2025-11-11 17:38:58.208208+05,
+103,test_user_103,test103@example.com,hash_103,f,2025-11-16 22:16:20.69033+05,35
+20,henry,henry@batch.com,hash3,f,2025-11-11 17:38:58.208208+05,
+21,ivy,ivy@batch.com,hash4,f,2025-11-11 17:38:58.208208+05,
+22,jack,jack@batch.com,hash5,f,2025-11-11 17:38:58.208208+05,
+104,test_user_104,test104@example.com,hash_104,f,2025-11-16 22:16:20.69033+05,28
+105,test_user_105,test105@example.com,hash_105,f,2025-11-16 22:16:20.69033+05,33
+28,xander2025,xander@a.com,hashed,f,2025-11-12 20:42:01.134994+05,
+36,xander2024,xander@cba.com,hashed,f,2025-11-12 21:03:14.218078+05,
+42,api_test_user,apt@test.com,hashed,f,2025-11-13 02:28:05.712722+05,

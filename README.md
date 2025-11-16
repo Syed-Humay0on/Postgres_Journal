@@ -7,7 +7,7 @@ Tracking my daily PostgreSQL learning with Docker + pgcli + Ecto.
 - ✅ Day 2: Production-Ready Blog Schema (10,104 rows)
 - ✅ Day 3: Complete CRUD Mastery (200+ lines, all patterns)
 - ✅ Day 4: Advanced Constraints (CHECK, UNIQUE, Partial Indexes, FOREIGN KEY Cascades, EXCLUSION)
-- 🚀 Day 5: CSV Import/Export
+- ✅ Day 5: CSV Import/Export (\COPY FROM/TO, constraints protect imports)
 
 ## Daily Logs
 - `day01-setup.sql` - Initial database creation
@@ -18,6 +18,7 @@ Tracking my daily PostgreSQL learning with Docker + pgcli + Ecto.
   - UNIQUE & Partial Indexes (case-insensitive emails, one active key per user)
   - FOREIGN KEY Cascades (ON DELETE CASCADE/SET NULL/RESTRICT)
   - EXCLUSION Constraints (meeting room double-booking prevention)
+- `day05.sql` - CSV bulk operations
 
 ## Quick Commands
 ```bash
